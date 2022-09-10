@@ -1,0 +1,117 @@
+
+.footer{
+    display: block;
+    text-align: center;
+    background:rgba(66, 63, 63, 0.105);
+    padding: 2vh;
+    width: 100vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.footer p{
+    color: white;
+    font-size: 20px;
+    opacity: 0.8;
+    font-family: Inter,sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+.footer .links{
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0;
+    align-items: center !important;
+}
+.links div{
+    border-radius: 100px;
+    background-color: rgb(14, 14, 14);
+    margin: 10px;
+    margin-bottom: 0;
+    align-items: baseline;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+.links .fb:hover{
+    background-color: blue;
+    transform: rotate(-360deg);
+}
+.links .insta:hover{
+    background-color: #fc1100;
+    transform: rotate(-360deg);
+}
+.links .twitter:hover{
+    background-color: rgb(38, 123, 255);
+    transform: rotate(-360deg);
+
+}
+.links .git:hover{
+    background-color: rgb(36, 154, 36);
+    transform: rotate(-360deg);
+
+}
+.links .linkedIn:hover{
+    background-color: #0a66c2;
+    transform: rotate(-360deg);
+
+}
+
+@media screen and (max-height: 1024px) {
+    .footer{
+        max-width: 100vw;
+        padding: 0;
+        margin: 0;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .footer p{
+        font-size: 10px;
+        letter-spacing: 0;
+        width: fit-content;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    svg{
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(180deg,rgb(132, 33, 11),orangered);
+        border-radius: 10px;
+        padding: 3px;
+        margin-bottom: 5px;
+    }
+    .links div{
+        padding: 0;
+    }
+    .links .fb:hover{
+        background: none !important;
+        transform: none !important;
+    }
+    .links .insta:hover{
+        background: none !important;
+        transform: none !important;
+    }
+    .links .twitter:hover{
+        background: none !important;
+        transform: none !important;
+    
+    }
+    .links .git:hover{
+        background:none !important;
+        transform: none !important;
+    
+    }
+    .links .linkedIn:hover{
+        background: none !important;
+        transform: none !important;
+    
+    }
+   
+}

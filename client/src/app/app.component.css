@@ -1,0 +1,120 @@
+.pc-nav-bar{
+    position: fixed;
+    left: 0;
+    top: 20%;
+    padding-top: 0;
+   margin: 0%;
+    width: 150px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.531);
+   border-bottom-right-radius: 20px;
+   border-top-right-radius: 20px;
+   text-align: center;
+}
+.nav-item{
+    margin: 0;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    align-content: center;
+    transition: transform 0.15s;
+    border-radius: 10px;
+}
+.nav-item img{
+    padding-top:38px;
+      width: 45px; 
+}
+.nav-item p{
+    align-items: center;
+    display: none;
+    padding: 0;
+    text-transform: uppercase;
+    color: beige;
+    font-size: 20px;
+    padding-top: 32%;
+    padding-right: 5%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;   
+}
+
+.nav-item:hover{
+    transform:rotate(360deg);
+    background:linear-gradient(20deg, orange,red) !important;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: 10px 10px 26px 1px rgb(3, 1, 13);
+    
+}
+.nav-item:hover img{
+    display: none;
+}
+.nav-item:hover p{
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+   
+}
+#nav-item-0{
+    background:  linear-gradient(20deg, orange,red);
+}
+
+.mob-nav-bar{
+    display: none;
+}
+
+
+
+@media screen and (max-height: 1024px) {
+    .pc-nav-bar{
+        display: none;
+    }
+    .mob-nav-bar{
+        display: block;
+    }
+    .threeLines{
+        width: 30px;
+        position: fixed;
+        right: 5vw;
+        top: 3vh;
+    }
+    
+    .mob-nav-text{
+        padding-top: 15vh;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        background: rgba(11, 7, 27, 0.331);
+        text-align: left;
+        
+        
+    }
+    .mob-nav-item img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .mob-nav-item{
+        display: flex;
+        margin: auto;
+        width: fit-content;
+        align-items: center;
+        font-family: 'Inter', sans-serif;  
+        font-weight: 700;
+        text-align: left;
+        font-size: large;
+        text-transform: uppercase;
+        margin-bottom: 2vh;
+        }
+        .closeIcon{
+            width: 25px;
+            position: fixed;
+            right: 5vw;
+            top: 3vh;
+        }
+
+        
+    
+  }
