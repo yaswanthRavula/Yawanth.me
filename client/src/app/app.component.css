@@ -16,6 +16,7 @@
     text-align: center;
     height: 10vh;
     align-items: center;
+    width: 20px;
     align-content: center;
     transition: transform 0.15s;
     border-radius: 10px;
