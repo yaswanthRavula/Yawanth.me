@@ -1,1 +1,32 @@
-<p>message works!</p>
+<div class="container">
+    <div class="text">
+        <p class="heading">Contact Me</p>
+        <p class="desc">Let's talk about how we can determine quality solution to your complex problem</p>
+    </div>
+    <div class="form-container">
+       <div class="row">
+                <p>Full name</p>
+                <input type="text" placeholder="Enter your full name" class="fullname" [(ngModel)]="fullName">
+       </div>
+
+       <div class="row">
+                <p>Email</p>
+                <input type="text" placeholder="Enter your email" class="email" [(ngModel)]="mailId">
+       </div>
+
+       <div class="row">
+                <p>Whatsapp number</p>
+                <input type="number" placeholder="Enter whatsapp number" class="number" [(ngModel)]="number">
+       </div>
+       <div class="row">
+                 <p>Short brief</p>
+                 <textarea [(ngModel)]="description" class="description" placeholder="Tell me about your thought or project"></textarea>
+       </div>
+       <button class="sendMessage" (click)="sendMessage()">Send Message</button>
+    </div>
+</div>
+
+<p style="color: orange; opacity:0.2;display:none;text-align: center;" (click)="showMessages()">..</p>
+
+
+<app-footer></app-footer>

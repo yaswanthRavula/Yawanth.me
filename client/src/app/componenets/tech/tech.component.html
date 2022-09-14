@@ -1,1 +1,30 @@
-<p>tech works!</p>
+<div class="container">
+    <p class="heading">Full Stack Technologies</p>
+    <p class="desc">I develop websites from both client and server side. In other words, it is <strong>Full Stack Development</strong>.</p>
+
+    <div class="technologies-container">
+        <div class="tech-category">
+            <p class="tech-heading">Forntend-part</p>
+            <div class="tech-cont" *ngFor="let tech of frontEndTechnologies">
+                <div class="text-container" >
+                    <p class="tech-name">{{tech.name}}</p>
+                    <p class="tech-desc">{{tech.description}}</p>
+                </div>
+                <img src="{{tech.imageURL}}">
+            </div>
+        </div>
+
+        <div class="tech-category">
+            <p class="tech-heading">Backend-part</p>
+             <div class="tech-cont" *ngFor="let tech of backEndTechnologies">
+                <div class="text-container" >
+                    <p class="tech-name">{{tech.name}}</p>
+                    <p class="tech-desc">{{tech.description}}</p>
+                </div>
+                <img src="{{tech.imageURL}}">
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

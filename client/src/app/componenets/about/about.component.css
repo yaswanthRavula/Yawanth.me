@@ -2,7 +2,7 @@
     width: 80vw;
     position: absolute;
     right: 4vw;
-    top: 10vh;
+    top: 2vh;
     color: white;
     text-align: center;
     font-family: Inter,sans-serif;
@@ -29,46 +29,44 @@
     padding: 20px;
     padding-top: 7vh;
     padding-left: 5vh;
-    border-top-left-radius: 200px !important;
-        border-radius: 20px;
-    background: rgba(136, 183, 205, 0.053);
+   border-radius: 20px;
+    background: rgba(136, 183, 205, 0.023);
 }
 .name{
-    font-size: 120px;
+    font-size: 60px;
     font-family: Inter,sans-serif;
     font-weight: 800;
     opacity: 7;
-    color: aliceblue;
+    color: rgb(255, 132, 0);
     margin: 0;
     margin-left: 2vw;
-    text-transform: capitalize;
-    letter-spacing: -4px;
+        text-transform: capitalize;
+    letter-spacing: -2px;
 }
 .short-description{
     font-size: 30px;
     max-width: 40vw;
     margin: 0;
     font-weight: 700;
-    margin-left: 4vw;
-    margin-top: 3vh;
-    color: rgb(247, 200, 80);
+    margin-left: 3vw;
+    margin-top: 2vh;
+    color: white;
     opacity: 0.8;
     letter-spacing:2px;
-   
-    margin-bottom: 4vh;
-    padding-bottom: 5vh;
-    border-bottom: 3px solid orangered;
+    margin-bottom: 5vh;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid rgba(255, 68, 0, 0.207);
 }
 .long-description{
-    font-size: 25px;
+    font-size: 40px;
     max-width: 60vw;
-    opacity:0.6 ;
+    opacity:0.9 ;
     margin-left: 4vw;
     letter-spacing: 2px;
     margin-top: 3vh;
-    font-weight: lighter !important;
-   
-    color: rgb(214, 194, 186);
+    font-weight: 600 !important;
+    color:rgba(176, 118, 64, 0.32)    ;
+    
 }
 .btns{
     display: flex;
@@ -102,10 +100,75 @@
     background: orangered;
 }
 
+.skills-container{
+    display: block;
+    color: aliceblue;
+    text-align: left;
+    padding: 20px;
+    padding-top: 7vh;
+    padding-left: 5vh;
+   border-radius: 20px;
+   width: 70vw;
+   margin-left: 16vw;
+   font-family: Inter,sans-serif;
+    margin-bottom: 5vh;
+    background: rgba(136, 183, 205, 0.023);
+
+}
+.skills-heading{
+    font-size: 60px;
+    font-weight:700 ;
+    margin-bottom: 0%;
+    margin-left: 2vw;
+    color: orange;
+}
+.skills-desc{
+    font-size: 30px;
+    max-width: 20vw;
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    color: rgb(172, 153, 90);
+
+}
+.grid-container{
+    margin-top: 5vh;
+    margin-left: 2vw;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+.row{
+   text-align: center;
+   padding: 10px;
+   margin-right: 2vw;
+   margin-bottom: 4vh;
+   padding-top: 30px;
+   padding-bottom:10px;
+   border-radius: 30px;
+   
+   background-color: rgba(255, 166, 0, 0.021);  
+}
+.row svg{
+    opacity: 0.9;
+    width: 150px;
+    height: 150px;
+}
+.row p{
+    font-size: 30px;
+    font-weight: 700;
+}
+.row:hover{
+    background-color: rgba(128, 128, 128, 0.041);   
+}
+
+
 
 
 @media screen and (max-height: 1024px) {
     .container{
+        margin-top: 50px;
         position: relative;
         padding: 0 !important;
         margin-left:auto ;
@@ -113,7 +176,7 @@
         text-align: center !important;
     }
     .so{
-        font-size:10px ;
+        font-size:13px ;
         margin: auto;
         margin-bottom: 10px;
         width: fit-content;
@@ -170,6 +233,35 @@
          max-width: fit-content;
     }
     .foot{
-        top: 115vh !important;
+        top: 100vh !important;
+    }
+    .skills-container{
+        margin-left:0 ;
+    }
+    .grid-container{
+        grid-template-columns: 50% 50% !important;
+    }
+    .row{
+        padding: 10px;
+        margin-right: 10vw;
+        margin-bottom: 2vh;
+        padding-top: 2vh;
+        padding-bottom:2vh;
+    }
+    .row svg{
+        width: 50px;
+        height: 50px;
+    }
+    .row p{
+        margin: 0;
+        margin-top: 2px;
+        font-size: 13px;
+    }
+    .skills-desc{
+        font-size: 15px;
+        max-width: 50vw;
+    }
+    .skills-heading{
+        font-size: 25px;
     }
 }

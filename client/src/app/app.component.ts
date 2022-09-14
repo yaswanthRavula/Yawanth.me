@@ -22,11 +22,25 @@ export class AppComponent {
     
   }
 
-  onOptionClicked(i){
+  onOptionClicked(i:number){
     for(var x=0;x<this.navItemArray.length;x++){
       document.getElementById("nav-item-"+x).style.background="transparent";
     }
     document.getElementById("nav-item-"+i).style.background="linear-gradient(20deg, orange,red)";
+    if(i==0)
+       this.router.navigate(['/Home']);
+    else if(i==1)
+      this.router.navigate(['/About']);
+    else if(i==2)
+      this.router.navigate(['/Work']);
+    else if(i==3)
+      this.router.navigate(['/Tech-stack']); 
+    else if(i==4)
+      this.router.navigate(['/Suggest']);
+    else
+      this.router.navigate(['/Contact-me']);   
+    this.closeMobNav();       
+           
   }
 
   openMobNav(){

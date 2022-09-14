@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componenets/home/home.component';
@@ -10,6 +10,7 @@ import { MessageComponent } from './componenets/message/message.component';
 import { SuggestComponent } from './componenets/suggest/suggest.component';
 import { TechComponent } from './componenets/tech/tech.component';
 import { FooterComponent } from './componenets/footer/footer.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { FooterComponent } from './componenets/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

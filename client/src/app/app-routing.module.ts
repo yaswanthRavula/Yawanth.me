@@ -10,7 +10,7 @@ import { WorkComponent } from './componenets/work/work.component';
 const routes: Routes = [
   {path:'', pathMatch:'full' ,redirectTo:'Home'},
   {path:'Home',component:HomeComponent},
-  {path:'about',component:AboutComponent},
+  {path:'About',component:AboutComponent},
   {path:'Work',component:WorkComponent},
   {path:'Tech-stack',component:TechComponent},
   {path:'Suggest',component:SuggestComponent},

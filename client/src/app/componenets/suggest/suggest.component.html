@@ -1,1 +1,41 @@
-<p>suggest works!</p>
+<div class="container">
+    <div class="text-container">
+        <p class="heading">Sugget me</p>
+        <p class="desc">Your small tip might be helpful for me in an enormous way.</p>
+        <p class="count"><span style="background: -webkit-linear-gradient(90deg,rgb(250, 67, 26),orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+              font-weight:800">120</span> suggestions so far.</p>
+    </div>
+
+    <div class="grid-container">
+       <div class="suggest-item" *ngFor="let item of suggestionsArray">
+            <img src="../../../assets/git.png">
+            <div>
+                    <p class="user-name">{{item.name}}</p>
+                    <p  class="suggestion-desc">{{item.description}}</p>
+            </div>  
+       </div>
+    </div>
+    
+    <div class="">  
+     <div class="text">
+        <p class="heading">Add your Review</p>
+     </div>
+    <div class="form-container">
+       <div class="row">
+                <p>Full name</p>
+                <input type="text" placeholder="Enter your full name" class="fullname" [(ngModel)]="fullName">
+       </div>
+       <div class="row">
+                 <p>Review</p>
+                 <textarea [(ngModel)]="review" class="description" placeholder="Describe your experience on my work"></textarea>
+       </div>
+       <button class="sendMessage" (click)="comment()">Comment</button>
+    </div>
+  </div>
+
+</div>
+<div style="margin-top: 50px;">
+<app-footer></app-footer>
+</div>
