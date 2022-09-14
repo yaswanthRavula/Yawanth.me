@@ -25,6 +25,7 @@
 }
 .nav-item img{
       width: 20px; 
+      margin-top: 30%;
 }
 .nav-item p{
     align-items: center;
@@ -33,7 +34,7 @@
     text-transform: uppercase;
     color: beige;
     font-size: 10px;
-    padding-top: 12%;
+    padding-top: 30%;
     padding-right: 5%;
     margin: 0;
     font-family: 'Inter', sans-serif;   
