@@ -1,7 +1,7 @@
 .pc-nav-bar{
     position: fixed;
     left: 0;
-    top: 20%;
+    top: 15%;
     padding-top: 0;
    margin: 0%;
     padding: 2px;
@@ -15,7 +15,7 @@
     margin: 0;
     text-align: center;
     padding: 10px;
-    width: 40px;
+    width: 45px;
     height: 40px;
     margin-bottom: 10px;
     align-items: center;
