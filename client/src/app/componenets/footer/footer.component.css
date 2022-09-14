@@ -39,7 +39,7 @@ svg{
     margin: 10px;
     margin-bottom: 0;
     align-items: baseline;
-    padding: 20px;
+    padding: 5px;
     transition: transform 0.2s;
 }
 .links .fb:hover{
