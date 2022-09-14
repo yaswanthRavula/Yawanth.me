@@ -100,7 +100,7 @@ button{
 }
 
 
-@media screen and (max-height: 1024px) {
+@media screen and (max-width: 920px) {
     .container{
         height: fit-content !important;
         width: fit-content!important;

@@ -166,7 +166,7 @@
 
 
 
-@media screen and (max-height: 1024px) {
+@media screen and (max-width: 920px) {
     .container{
         margin-top: 50px;
         position: relative;
