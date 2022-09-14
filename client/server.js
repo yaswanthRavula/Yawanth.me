@@ -1,9 +1,17 @@
 const express=require('express');
 const app=express();
+const path=require('path');
 const bodyParser=require('body-parser');
 app.use(express.json())
 const cors=require('cors');
 app.use(cors());
+
+app.use(express.static(__dirname+'/dist/client'))
+
+app.get('/', (req,res)=>{
+    res.sendFile(path.join('/dist/client/index.html'))
+})
+
 const messageController=require("./message-controller");
 const reviewController=require("./review-controller");
 
