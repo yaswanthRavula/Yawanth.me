@@ -6,7 +6,7 @@
 
 }
 .heading{
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 800;
     margin: 0;
     width: 50vw;
@@ -16,26 +16,26 @@
      padding-bottom: 10px;
 }
 .desc{
-    font-size: 35px;
+    font-size: 18px;
     max-width: 40vw;
     margin: 0;
     margin-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     border-bottom: 3px solid  rgba(254, 254, 255, 0.178);
 }
 
 .technologies-container{
-    margin-top: 5vh;
+    margin-top: 3vh;
    }
 
 .tech-category{
     
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 .tech-heading{
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 800;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     border-bottom: 3px solid  rgba(254, 254, 255, 0.178);
     width: 60vw;
     
@@ -58,8 +58,8 @@
     background:linear-gradient(32deg, rgba(255, 68, 0, 0.044), rgba(255, 166, 0, 0.047))
 }
 .tech-cont img{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height:50px;
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
@@ -70,19 +70,19 @@
     -webkit-text-fill-color: transparent;
     
     width: fit-content;
-    font-size: 40px;
+    font-size: 20px;
     margin: 0;
     font-weight: 700;
 }
 .tech-desc{
     max-width: 40vw;
-    font-size: 22px;
+    font-size: 13px;
     opacity: 0.8;
 }
 
 
 
-@media screen and (max-width: 920px) 
+@media screen and (max-width: 576px) 
  {
     .container{
         margin-left: 3vw;

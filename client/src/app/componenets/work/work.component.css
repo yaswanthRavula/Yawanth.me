@@ -76,7 +76,7 @@
     text-align: left;
 }
 
-@media screen and (max-width: 920px) 
+@media screen and (max-width: 576px) 
  {
     .container{
         margin-left: 2%;
