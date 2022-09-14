@@ -11,6 +11,7 @@ import { SuggestComponent } from './componenets/suggest/suggest.component';
 import { TechComponent } from './componenets/tech/tech.component';
 import { FooterComponent } from './componenets/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {HttpClientModule} from '@angular/common/http'
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
