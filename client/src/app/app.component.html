@@ -9,13 +9,13 @@
   <img src="../assets/mob nav.jpg" style="opacity: 0.6;" (click)="openMobNav()" class="threeLines" id="threeLines">
   <div class="mob-nav-text" id="mob-nav-text" >
     <img src="../assets/close.png" (click)="closeMobNav()" style="opacity: 0.6;"  class="closeIcon"id="closeIcon">
-       <div class="mob-nav-item" *ngFor="let navItem of navItemArray">
+       <div class="mob-nav-item" (click)="onOptionClicked(i)"  *ngFor="let navItem of navItemArray;index as i">
         <img src="{{navItem.image}}">
         <p>{{navItem.optionName}}</p>
        </div>
   </div>
 </div>
 
-<div>
+<div [hidden]="routerHidden">
 <router-outlet></router-outlet>
 </div>

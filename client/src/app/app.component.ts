@@ -9,8 +9,10 @@ import { NavItem } from './shared/nav-item';
 })
 export class AppComponent {
   navItemArray:NavItem[]=[];
+  routerHidden=false;
   constructor(private router:Router){}
   ngOnInit():void{
+    this.routerHidden=false;
     this.navItemArray=[
       {optionName:"Home", image:"../assets/home.png"},
       {optionName:"About", image:"../assets/about.png"},
@@ -39,6 +41,7 @@ export class AppComponent {
       this.router.navigate(['/Suggest']);
     else
       this.router.navigate(['/Contact-me']);   
+     this.routerHidden=false; 
     this.closeMobNav();       
            
   }
@@ -46,8 +49,10 @@ export class AppComponent {
   openMobNav(){
     document.getElementById("threeLines").style.display="none";
     document.getElementById("mob-nav-text").style.display="block";
+    this.routerHidden=true;
   }
   closeMobNav(){
+    this.routerHidden=false;
     document.getElementById("threeLines").style.display="flex";
     document.getElementById("mob-nav-text").style.display="none";
   }

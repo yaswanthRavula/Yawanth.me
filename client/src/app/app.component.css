@@ -78,6 +78,9 @@
     }
     .mob-nav-bar{
         display: block;
+        position:fixed;
+        z-index: 10000;
+        background: #111;
     }
     .threeLines{
         width: 30px;

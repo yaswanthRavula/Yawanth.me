@@ -18,12 +18,12 @@ message:Message;
   ngOnInit(): void {
   }
 
-  sendMessage(){
+  async sendMessage(){
     console.log(this.isFormFilled())
     if(this.isFormFilled()){
       console.log("Entering")
        this.message={name:this.fullName, number:this.number,description:this.description,mail:this.mailId}
-       this.messageService.postMessage(this.message).subscribe((res)=>{
+       await this.messageService.postMessage(this.message).toPromise().then((res)=>{
         if(res==true){
           alert("Your message is Posted")
           window.location.reload();

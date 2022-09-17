@@ -11,22 +11,23 @@ export class SuggestComponent implements OnInit {
 
   fullName;
   review;
+  suggestionsCount=0;
 
   suggestionsArray:Review[]=[]
   constructor(private reviewService:ReviewService) { }
 
   async ngOnInit() {
     await this.getReviews();
+    this.suggestionsCount=this.suggestionsArray.length;
   }
 
-  comment(){
+  async comment(){
       if(this.fullName!=undefined && this.fullName.length >=4 && this.review !=undefined && this.review.length>=3){
           const reviewObj:Review={name:this.fullName, description:this.review};
-          this.reviewService.postReview(reviewObj).subscribe((res)=>{
+          await this.reviewService.postReview(reviewObj).toPromise().then(async(res)=>{
               alert("Thanks For your feedback");
               window.location.reload();
-          })
-
+          });
     
       }
 
