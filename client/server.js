@@ -3,6 +3,7 @@ const app=express();
 const path=require('path');
 const bodyParser=require('body-parser');
 app.use(express.json())
+app.use(bodyParser.json())
 const cors=require('cors');
 app.use(cors());
 
