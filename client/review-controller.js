@@ -7,6 +7,7 @@ router.post("/",async (req,res)=>{
     const review =req.body.description;
     try{
       await Review.postReview(name, review);
+      res.send("true");
 
     }catch(Err){
         console.log("Erro occured",Err);

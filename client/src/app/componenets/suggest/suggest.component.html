@@ -31,7 +31,7 @@
                  <p>Review</p>
                  <textarea [(ngModel)]="review" class="description" placeholder="Describe your experience on my work"></textarea>
        </div>
-       <button class="sendMessage" (click)="comment()">Comment</button>
+       <button class="sendMessage" (keypress)="comment()" (click)="comment()">Comment</button>
     </div>
   </div>
 

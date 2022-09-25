@@ -25,8 +25,9 @@ export class SuggestComponent implements OnInit {
       if(this.fullName!=undefined && this.fullName.length >=4 && this.review !=undefined && this.review.length>=3){
           const reviewObj:Review={name:this.fullName, description:this.review};
           await this.reviewService.postReview(reviewObj).toPromise().then(async(res)=>{
+              console.log(res);
               alert("Thanks For your feedback");
-              window.location.reload();
+              
           });
     
       }

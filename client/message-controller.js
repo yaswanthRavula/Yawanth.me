@@ -8,10 +8,10 @@ router.post("/",async(req,res)=>{
     const description = req.body.description;
     try{
         await Message.postMessage(name,number, mail, description);
-        res.send(true);
+        res.send("true");
     }catch(Err){
         console.log(Err);
-        res.send(false);
+        res.send("false");
     }
 })
 
