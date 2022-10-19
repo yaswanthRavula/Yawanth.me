@@ -9,7 +9,7 @@ import { Message } from '../shared/message';
 export class MessageService {
 
   constructor(private http:HttpClient) { }
-  url="http://localhost:9000/";
+  url="https://yaswanth.site/messages";
 
 
   postMessage(message:Message){

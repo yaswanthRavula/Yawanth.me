@@ -1,8 +1,10 @@
 const mysql=require('mysql2');
-const pool=mysql.createPool({
+const db=mysql.createConnection({
     host:"localhost",
     database:"yaswanth_me",
     user:"root",
-    password:"Yy@8309328761"
-})
-module.exports=pool.promise();
+    password:"Yy@8309328761",
+    port:3306
+});
+
+module.exports=db;

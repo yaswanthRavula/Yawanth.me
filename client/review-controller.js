@@ -1,6 +1,10 @@
 const express=require("express");
+const app=express();
 const router=express.Router();
+const cors=require('cors');
+app.use(cors())
 const Review=require("./review");
+const connection=require("./database");
 
 router.post("/",async (req,res)=>{
     const name=req.body.name;
@@ -14,11 +18,18 @@ router.post("/",async (req,res)=>{
     }
 })
 
-router.get("/", async (req,res)=>{
+router.get("/",cors(), async (req,res)=>{
     try{
-        const reviews=await Review.getAllReviews();
-        res.send(reviews[0]);
-        console.log(reviews[0])
+       connection.connect((err)=>{
+        if(err){
+            console.log("Error in database connection -/-/-")
+        }else{
+            console.log("Database connected succesfully")
+        }
+       });
+       connection.query("SELECT * FROM reviews",function(request,result){
+        res.send(result);
+       })
     }catch(Err){
         console.log("Error occured ",Err);
     }
