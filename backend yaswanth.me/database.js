@@ -6,5 +6,9 @@ const db=mysql.createConnection({
     password:"Yy@8309328761",
     port:3306
 });
-db.connect();
+db.connect((err)=>{
+    if(err){
+        console.log("Error is raised in connection---:---", err)
+    }
+});
 module.exports=db;
