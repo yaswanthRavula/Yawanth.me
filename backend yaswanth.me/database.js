@@ -1,6 +1,6 @@
 const mysql=require('mysql2');
 const db=mysql.createConnection({
-    host:"127.0.0.1",
+    host:this.config.host,
     database:"yaswanth_me",
     user:"yaswanth",
     password:"Yy@8309328761",
