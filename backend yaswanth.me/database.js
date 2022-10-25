@@ -6,5 +6,5 @@ const db=mysql.createConnection({
     password:"Yy@8309328761",
     port:3306
 });
-
+db.connect();
 module.exports=db;
