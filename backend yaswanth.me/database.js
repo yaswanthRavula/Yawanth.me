@@ -4,7 +4,7 @@ const db=mysql.createConnection({
     database:"yaswanth_me",
     user:"yaswanth",
     password:"Yy@8309328761",
-    port:3306
+    port:"3306"
 });
 db.connect((err)=>{
     if(err){
