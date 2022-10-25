@@ -1,6 +1,6 @@
 const mysql=require('mysql2');
 const db=mysql.createConnection({
-    host:"localhost",
+    host:"127.0.0.1",
     database:"yaswanth_me",
     user:"yaswanth",
     password:"Yy@8309328761",
@@ -8,7 +8,7 @@ const db=mysql.createConnection({
 });
 db.connect((err)=>{
     if(err){
-        console.log("Error is raised in connection---:---", err)
+        console.log("Error is raised in connection", err)
     }
 });
 module.exports=db;
