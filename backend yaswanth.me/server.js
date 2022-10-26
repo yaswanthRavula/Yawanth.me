@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 const path=require('path');
+const router=express.Router();
 const bodyParser=require('body-parser');
 app.use(bodyParser.json())
 const cors=require('cors');
@@ -31,5 +32,10 @@ app.all('*', function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
+router.get("/",(req,res)=>{
+    res.send("Connected Succesfully");
+    console.log("Called get in base router")
+})
 app.use("/messages",messageController);
 app.use("/reviews",reviewController);
+module.exports=router;
