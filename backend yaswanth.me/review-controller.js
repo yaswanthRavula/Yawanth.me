@@ -4,13 +4,12 @@ const router=express.Router();
 const cors=require('cors');
 app.use(cors())
 const Review=require("./review");
-const connection=require("./database");
 
 router.post("/",async (req,res)=>{
     const name=req.body.name;
     const review =req.body.description;
     try{
-      await Review.postReview(name, review);
+     await Review.postReview(name, review);
       res.send("true");
 
     }catch(Err){
@@ -20,9 +19,8 @@ router.post("/",async (req,res)=>{
 
 router.get("/",cors(), async (req,res)=>{
     try{
-       connection.query("SELECT * FROM reviews",function(request,result){
-        res.send(result);
-       })
+        var result=await Review.getAllReviews();
+        res.send(result[0]);
     }catch(Err){
         console.log("Error occured ",Err);
     }
