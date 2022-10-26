@@ -1,6 +1,7 @@
 const express=require("express");
 const router=express.Router();
 const Message=require("./message");
+const connection =require('./database');
 router.post("/",async(req,res)=>{
     const name=req.body.name;
     const number=req.body.number;
@@ -17,10 +18,11 @@ router.post("/",async(req,res)=>{
 
 router.get("/", async(req,res)=>{
     try{
-        const messages=await Message.getMessages();
-        res.send(messages[0]);
-    }catch(Err){
-        console.log("Error",Err);
-    }
+        connection.query("SELECT * FROM messages",function(request,result){
+         res.send(result);
+        })
+     }catch(Err){
+         console.log("Error occured ",Err);
+     }
 })
 module.exports=router;

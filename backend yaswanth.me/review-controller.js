@@ -20,13 +20,6 @@ router.post("/",async (req,res)=>{
 
 router.get("/",cors(), async (req,res)=>{
     try{
-       connection.connect((err)=>{
-        if(err){
-            console.log("Error in database connection -/-/-")
-        }else{
-            console.log("Database connected succesfully")
-        }
-       });
        connection.query("SELECT * FROM reviews",function(request,result){
         res.send(result);
        })

@@ -12,8 +12,10 @@ module.exports= class Message{
     }
 
     static getMessages(){
-        return db.execute(
-            "SELECT * from messages"
-        );
+        var result=null;
+        connection.query("SELECT * FROM messages",function (err,res){
+        result=res;
+       });
+       return result;
     }
 }
