@@ -18,7 +18,7 @@ const messageController=require("./message-controller");
 const reviewController=require("./review-controller");
 const PORT=process.env.PORT||9000;
 
-app.listen((PORT),()=>{console.log("Port is listeing at ",process.env.PORT)});
+app.listen((PORT),()=>{console.log("Port is listeing at 9000")});
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
