@@ -1,7 +1,6 @@
 const express=require('express');
 const app=express();
-const bodyParser=require('body-parser');
-app.use(bodyParser.json())
+app.use(express.json({extended:false}))
 const messageController=require("./message-controller");
 const reviewController=require("./review-controller");
 
