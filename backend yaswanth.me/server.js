@@ -9,4 +9,4 @@ const PORT=process.env.PORT||9000;
 
 app.listen((PORT),()=>{console.log("Port is listeing at 9000")});
 app.use("/messages",messageController);
-app.use("/reviews",reviewController);
+app.use("/reviews",reviewController); 
