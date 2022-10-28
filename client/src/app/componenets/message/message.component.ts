@@ -25,7 +25,7 @@ message:Message;
        this.message={name:this.fullName, number:this.number,description:this.description,mail:this.mailId}
        await this.messageService.postMessage(this.message).toPromise().then((res)=>{
         if(res==true){
-          alert("Your message is Posted")
+          alert("Hey! Message received. Yaswanth will reach you within next 5 hours!")
           window.location.reload();
         }
        });

@@ -26,7 +26,7 @@ export class SuggestComponent implements OnInit {
           const reviewObj:Review={name:this.fullName, description:this.review};
           await this.reviewService.postReview(reviewObj).toPromise().then(async(res)=>{
               console.log(res);
-              alert("Thanks For your feedback");
+              alert("Hey! your suggestion weighs a lot to us. Will let it reach my boss Yaswanth right now.");
               
           });
     
