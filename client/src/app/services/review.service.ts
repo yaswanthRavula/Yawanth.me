@@ -9,7 +9,7 @@ import { Review } from '../shared/review';
 export class ReviewService {
 
   constructor(private http:HttpClient) { }
-  url="http://localhost:9000/";
+  url="https://yaswanth-me.vercel.app/";
 
   postReview(review:Review){
     return this.http.post(this.url+"reviews",review );

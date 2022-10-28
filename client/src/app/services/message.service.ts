@@ -9,7 +9,7 @@ import { Message } from '../shared/message';
 export class MessageService {
 
   constructor(private http:HttpClient) { }
-  url="https://yaswanth.site/messages";
+  url="https://yaswanth-me.vercel.app/";
 
 
   postMessage(message:Message){
